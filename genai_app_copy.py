@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import streamlit as st
 from langchain_community.llms import Ollama
 from langchain_groq import ChatGroq
@@ -10,9 +10,9 @@ from langchain.chains import LLMChain
 
 
 # Load environment variables
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
-
+# load_dotenv()
+# groq_api_key = os.getenv("GROQ_API_KEY")
+groq_api_key = st.secrets["GROQ_API_KEY"]
 # Streamlit UI
 st.title("Your friendly roasting bot -- get ready to be roasted🔥")
 
@@ -62,3 +62,4 @@ else:
 if st.button("Clear Chat History"):
     st.session_state.memory.clear()
     st.success("Chat history cleared!")
+
