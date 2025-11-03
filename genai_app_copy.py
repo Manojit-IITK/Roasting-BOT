@@ -43,7 +43,7 @@ if user_input:
     st.session_state.chat_history.append(AIMessage(content=response))
     
     # Display response
-    st.markdown(f"**Bot:** {response}")
+    st.markdown(f"{response}")
 
 # Show history
 st.divider()
@@ -63,3 +63,4 @@ if st.button("Clear Chat History"):
     st.session_state.chat_history = []
     st.success("Chat history cleared!")
     st.rerun()
+
