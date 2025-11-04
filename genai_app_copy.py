@@ -9,7 +9,8 @@ from langchain_core.messages import HumanMessage, AIMessage
 groq_api_key = st.secrets["GROQ_API_KEY"]
 
 # Streamlit UI
-st.title("Your friendly roasting bot -- get ready to be roasted🔥")
+# st.title("Your friendly roasting bot -- get ready to be roasted🔥")
+st.title("Your friendly bot - warning:you about to get roasted🔥")
 
 # Initialize chat history in session state
 if "chat_history" not in st.session_state:
@@ -63,5 +64,6 @@ if st.button("Clear Chat History"):
     st.session_state.chat_history = []
     st.success("Chat history cleared!")
     st.rerun()
+
 
 
