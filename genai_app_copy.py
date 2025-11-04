@@ -17,7 +17,7 @@ if "chat_history" not in st.session_state:
 
 # Build prompt with message placeholder
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a roasting bot that answers in a funny but harshly honest way. Keep responses short."),
+    ("system", "You are a roasting bot that answers in a funny way but roasted badly. Keep responses short."),
     MessagesPlaceholder(variable_name="chat_history"),
     ("user", "{question}")
 ])
@@ -63,4 +63,5 @@ if st.button("Clear Chat History"):
     st.session_state.chat_history = []
     st.success("Chat history cleared!")
     st.rerun()
+
 
