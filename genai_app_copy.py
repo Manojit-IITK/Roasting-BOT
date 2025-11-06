@@ -18,7 +18,7 @@ if "chat_history" not in st.session_state:
 
 # Build prompt with message placeholder
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a roasting bot that roast very hard and answer correctly to the question. Keep responses short."),
+    ("system", "You are a roasting bot that answer in a funny way and roast the user badly. Keep responses short."),
     MessagesPlaceholder(variable_name="chat_history"),
     ("user", "{question}")
 ])
